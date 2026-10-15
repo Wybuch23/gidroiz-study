@@ -1,0 +1,78 @@
+/* ==========================================================
+   projects.css — «Завершённые проекты» (блок .projects)
+   Заголовок/лид и кнопка «Показать больше» — общие, см. main.css
+   ========================================================== */
+
+.projects {
+  padding: var(--section-py) var(--gutter);
+  background: #fff;
+}
+.projects__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.projects__lead {
+  margin-top: clamp(20px, 4vw, 56px);
+}
+
+/* Сетка карточек */
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: clamp(16px, 2.3vw, 32px);
+  margin-top: clamp(32px, 6vw, 84px);
+}
+
+/* Карточка: 4 строки (фото / город / заголовок / текст).
+   Через subgrid строки выравниваются между карточками одного ряда */
+.projects__card {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+.projects__img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #e6e8eb;
+}
+.projects__city {
+  margin-top: 18px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.projects__card-title {
+  margin-top: 8px;
+  font-size: var(--fs-card-title);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.projects__card-text {
+  margin-top: 16px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+/* Fallback без subgrid */
+@supports not (grid-template-rows: subgrid) {
+  .projects__card { display: flex; flex-direction: column; }
+}
+
+.projects__more {
+  margin-top: clamp(8px, 2vw, 24px);
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 960px) {
+  .projects__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .projects__list { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,33 @@
+/* ==========================================================
+   support.css — «Поддержка специалистов по всей России» (блок .support)
+   Заголовок — общий .section-title, см. main.css
+   ========================================================== */
+
+.support {
+  padding: var(--section-py) var(--gutter);
+  background: #fff;
+  text-align: center;
+}
+.support__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.support__title {
+  max-width: 16em;
+  margin: 0 auto;
+}
+
+.support__lead {
+  max-width: 36em;
+  margin: clamp(24px, 4.5vw, 64px) auto 0;
+  font-size: var(--fs-text);
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+.support__map {
+  width: 100%;
+  height: auto;
+  margin-top: clamp(24px, 4vw, 56px);
+}

@@ -1,0 +1,36 @@
+/* ==========================================================
+   about.css — «О компании» (блок .about)
+   ========================================================== */
+
+.about {
+  padding: var(--section-py) var(--gutter);
+  background: #fff;
+}
+.about__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about__logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: clamp(32px, 7vw, 100px);
+}
+
+/* Текст */
+.about__text {
+  font-size: var(--fs-about);
+  line-height: 1.55;
+}
+.about__text p + p,
+.about__text p + ul,
+.about__text ul + p {
+  margin-top: 1.5em;
+}
+
+.about__list {
+  padding-left: 1.4em;
+  list-style: disc;
+}
+.about__list li { padding-left: 0.2em; }
+.about__list li::marker { font-size: 0.9em; }

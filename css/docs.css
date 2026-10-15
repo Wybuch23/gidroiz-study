@@ -1,0 +1,82 @@
+/* ==========================================================
+   docs.css — «Документация» (блок .docs)
+   Заголовок/лид и кнопка «Показать больше» — общие, см. main.css
+   ========================================================== */
+
+.docs {
+  padding: var(--section-py) var(--gutter);
+  background: #fff;
+}
+.docs__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.docs__lead {
+  margin-top: clamp(14px, 1.8vw, 24px);
+}
+
+/* Сетка карточек */
+.docs__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.2vw, 30px);
+  margin-top: clamp(28px, 4.5vw, 64px);
+}
+
+/* Карточка-документ: заголовок сверху, ссылка «Скачать» внизу.
+   Вся карточка кликабельна (ссылка растянута через ::after) */
+.docs__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(16px, 2.4vw, 28px);
+  min-height: clamp(110px, 11vw, 150px);
+  padding: clamp(12px, 1.1vw, 16px);
+  border: 2px solid var(--color-border);
+  background: #fff;
+  transition: background .2s ease;
+}
+.docs__card:hover { background: #f5f5f5; }
+.docs__card:focus-within { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+.docs__card-title {
+  font-size: clamp(1.1875rem, 0.95rem + 0.95vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.docs__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+.docs__link::after {          /* растягиваем кликабельную область на всю карточку */
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.docs__link:focus-visible { outline: none; }   /* рамку рисует карточка (:focus-within) */
+.docs__link svg {
+  width: 8px;
+  height: 12px;
+  transition: transform .2s ease;
+}
+.docs__card:hover .docs__link svg { transform: translateX(3px); }
+
+.docs__more {
+  margin-top: clamp(24px, 3.5vw, 48px);
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 960px) {
+  .docs__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .docs__list { grid-template-columns: 1fr; }
+  .docs__card { min-height: 0; }
+}

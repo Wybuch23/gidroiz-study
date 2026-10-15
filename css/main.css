@@ -1,0 +1,139 @@
+/* ==========================================================
+   main.css — общие стили сайта
+   Здесь: токены (переменные), reset, базовые элементы,
+   общие компоненты (кнопки). Стили секций — в отдельных файлах.
+   ========================================================== */
+
+/* ---------- Токены ---------- */
+:root {
+  /* Цвета */
+  --color-bg: #f2f2f2;
+  --color-text: #000;
+  --color-accent: #4b3fe6;
+  --color-accent-hover: #3b30c9;
+  --color-border: #000;
+  --color-card: rgba(255, 255, 255, 0.72);
+  --color-footer-bg: #121226;
+
+  /* Типографика */
+  --font-main: "Open Sans", "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --fs-nav: 0.9375rem;                                  /* 15px */
+  --fs-h1: clamp(2rem, 1.2rem + 4.2vw, 4.25rem);        /* 32 → 68px */
+  --fs-h2: clamp(1.5rem, 1.1rem + 1.8vw, 2.375rem);     /* 24 → 38px */
+  --fs-h2-wide: clamp(1.375rem, 1rem + 1.5vw, 2rem);
+  --fs-text: clamp(1rem, 0.9rem + 0.55vw, 1.3125rem);   /* 16 → 21px */
+  --fs-h2-section: clamp(2rem, 1.3rem + 3.2vw, 3.5rem); /* заголовок секции: 32 → 56px */
+  --fs-lead: clamp(1.0625rem, 0.95rem + 0.6vw, 1.5rem); /* вводный текст секции: 17 → 24px */
+  --fs-about: clamp(1rem, 0.92rem + 0.45vw, 1.25rem);   /* текст «О компании»: 16 → 20px */
+  --fs-card-title: clamp(1.25rem, 1rem + 1.1vw, 1.875rem); /* заголовок карточки: 20 → 30px */
+
+  /* Отступы и размеры */
+  --gutter: clamp(16px, 5.3vw, 70px);   /* боковой отступ страницы */
+  --header-h: 64px;
+  --section-py: clamp(40px, 6.5vw, 88px); /* вертикальный отступ секций */
+  --radius: 8px;
+
+  /* Слои */
+  --z-header: 20;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1px); /* липкая шапка не закрывает начало секции при переходе по якорю */
+}
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; }
+[hidden] { display: none !important; }
+
+/* Виден только скринридерам (например, заголовок секции без визуального заголовка) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+/* ---------- Общие компоненты ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 19px;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background .2s ease;
+}
+.btn:hover { background: var(--color-accent-hover); }
+
+/* Заголовок и вводный текст секции (общие для секций с контентом) */
+.section-title {
+  font-size: var(--fs-h2-section);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.section-lead {
+  max-width: 36em;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* Кнопка «Показать больше» (логика — js/show-more.js) */
+.show-more {
+  display: flex;
+  justify-content: flex-end;
+}
+.show-more__btn {
+  height: 46px;
+  padding: 0 24px;
+  border: 1px solid #d6d6d6;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--color-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+.show-more__btn:hover {
+  border-color: var(--color-text);
+  background: #f7f7f7;
+}
+@media (max-width: 600px) {
+  .show-more { justify-content: stretch; }
+  .show-more__btn { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .btn { padding: 0 12px; font-size: 0.8125rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}

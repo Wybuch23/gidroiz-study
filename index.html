@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Институт гидроизоляции</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Общие стили -->
+        <link rel="stylesheet" href="css/main.css" />
+
+        <!-- Блоки (по одному файлу на секцию) -->
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/projects.css" />
+        <link rel="stylesheet" href="css/docs.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="css/support.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+    </head>
+    <body id="top">
+        <header class="header">
+            <div class="header__inner">
+                <a
+                    class="header__logo"
+                    href="#"
+                    aria-label="Институт гидроизоляции — на главную"
+                >
+                    <!-- Заглушка логотипа: замените на свой SVG/PNG -->
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <circle
+                            cx="24"
+                            cy="24"
+                            r="21"
+                            fill="#eaf2fb"
+                            stroke="#4a86c8"
+                            stroke-width="3"
+                        />
+                        <path
+                            d="M24 10c-5.5 0-9 4-9 9 0 6.5 9 17 9 17s9-10.5 9-17c0-5-3.5-9-9-9z"
+                            fill="#3b78bf"
+                        />
+                        <circle cx="24" cy="19.5" r="3.6" fill="#fff" />
+                    </svg>
+                </a>
+
+                <nav
+                    class="header__nav"
+                    id="nav"
+                    aria-label="Основная навигация"
+                >
+                    <ul class="header__list">
+                        <li>
+                            <a class="header__link" href="#services">Услуги</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#docs">Документы</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#about">О компании</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#contacts"
+                                >Контакты</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__right">
+                    <a class="btn" href="tel:+79999999999">+7(999)999-99-99</a>
+                    <button
+                        class="header__burger"
+                        type="button"
+                        aria-label="Открыть меню"
+                        aria-expanded="false"
+                        aria-controls="nav"
+                    >
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero hero--has-image"" id="services">
+                <h1 class="hero__title">Институт гидроизоляции</h1>
+
+                <div class="hero__cards">
+                    <article class="hero__card">
+                        <h2 class="hero__card-title">
+                            Курс обучения по работе с узлами
+                        </h2>
+                        <p class="hero__card-text">
+                            Обучение правильному устройству стыков, примыканий,
+                            проходок и критических точек гидроизоляции.
+                        </p>
+                    </article>
+
+                    <article class="hero__card">
+                        <h2 class="hero__card-title">
+                            Курс обучения по работе с материалами
+                        </h2>
+                        <p class="hero__card-text">
+                            Обучение по видам материалов, технологиям нанесения,
+                            совместимости и типичным ошибкам применения.
+                        </p>
+                    </article>
+
+                    <article class="hero__card hero__card--wide">
+                        <h2 class="hero__card-title">Типовые узлы</h2>
+                        <p class="hero__card-text">
+                            Готовые технические решения по стандартным узлам для
+                            использования в проектировании и на объекте.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Завершённые проекты.
+         data-initial — сколько карточек видно сразу, data-step — сколько добавляет «Показать больше» (js/show-more.js).
+         Чтобы добавить проект, скопируйте любой <article class="projects__card"> и вставьте
+         в конец <div class="projects__list">. Если карточек больше data-initial, кнопка появится сама. -->
+            <section
+                class="projects"
+                id="projects"
+                data-show-more
+                data-initial="3"
+                data-step="3"
+            >
+                <div class="projects__inner">
+                    <h2 class="section-title">Завершённые проекты</h2>
+                    <p class="section-lead projects__lead">
+                        Подборка проектов, где правильное проектирование и
+                        монтаж обеспечили надёжную и долговечную гидроизоляцию.
+                    </p>
+
+                    <div
+                        class="projects__list"
+                        id="projects-list"
+                        data-show-more-list
+                    >
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/projects/project1.png"
+                                alt="Многоуровневый паркинг"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                            />
+                            <p class="projects__city">Москва</p>
+                            <h3 class="projects__card-title">
+                                Многоуровневый паркинг
+                            </h3>
+                            <p class="projects__card-text">
+                                Полная система гидроизоляции подземных стен,
+                                плит и деформационных швов.
+                            </p>
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/projects/project2.png"
+                                alt="Монтаж плоской кровли"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                            />
+                            <p class="projects__city">Санкт-Петербург</p>
+                            <h3 class="projects__card-title">
+                                Монтаж плоской кровли коммерческого здания
+                            </h3>
+                            <p class="projects__card-text">
+                                Мембранная кровля с детальной проработкой
+                                парапетов и проходок.
+                            </p>
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/projects/project3.png"
+                                alt="Проходки труб и примыкания"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                            />
+                            <p class="projects__city">Казань</p>
+                            <h3 class="projects__card-title">
+                                Проходки труб и устройство примыканий
+                            </h3>
+                            <p class="projects__card-text">
+                                Армированная проработка критических узлов для
+                                исключения путей протечек.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div
+                        class="show-more projects__more"
+                        data-show-more-footer
+                        hidden
+                    >
+                        <button
+                            class="show-more__btn"
+                            type="button"
+                            aria-controls="projects-list"
+                            data-show-more-btn
+                        >
+                            Показать больше
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Документация. Логика «Показать больше» та же, что в проектах (js/show-more.js).
+         Чтобы добавить документ, скопируйте <article class="docs__card"> в конец <div class="docs__list">,
+         поменяйте заголовок и href (файл положите в папку docs/). -->
+            <section
+                class="docs"
+                id="docs"
+                data-show-more
+                data-initial="3"
+                data-step="3"
+            >
+                <div class="docs__inner">
+                    <h2 class="section-title">Документация</h2>
+                    <p class="section-lead docs__lead">
+                        Лицензии, сертификаты, свидетельства и другие документы
+                    </p>
+
+                    <div class="docs__list" id="docs-list" data-show-more-list>
+                        <article class="docs__card">
+                            <h3 class="docs__card-title">
+                                Сертификат о контакте с пищевой водой
+                            </h3>
+                            <a
+                                class="docs__link"
+                                href="docs/certificate-drinking-water.pdf"
+                                download
+                                >Скачать
+                                <svg viewBox="0 0 8 12" aria-hidden="true">
+                                    <path
+                                        d="M1.5 1.5 6 6l-4.5 4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></a>
+                        </article>
+
+                        <article class="docs__card">
+                            <h3 class="docs__card-title">
+                                Декларации о соответствии
+                            </h3>
+                            <a
+                                class="docs__link"
+                                href="docs/declarations.pdf"
+                                download
+                                >Скачать
+                                <svg viewBox="0 0 8 12" aria-hidden="true">
+                                    <path
+                                        d="M1.5 1.5 6 6l-4.5 4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></a>
+                        </article>
+
+                        <article class="docs__card">
+                            <h3 class="docs__card-title">Протокол испытаний</h3>
+                            <a
+                                class="docs__link"
+                                href="docs/test-report.pdf"
+                                download
+                                >Скачать
+                                <svg viewBox="0 0 8 12" aria-hidden="true">
+                                    <path
+                                        d="M1.5 1.5 6 6l-4.5 4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></a>
+                        </article>
+                    </div>
+
+                    <div
+                        class="show-more docs__more"
+                        data-show-more-footer
+                        hidden
+                    >
+                        <button
+                            class="show-more__btn"
+                            type="button"
+                            aria-controls="docs-list"
+                            data-show-more-btn
+                        >
+                            Показать больше
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- О компании -->
+            <section class="about" id="about">
+                <div class="about__inner">
+                    <h2 class="visually-hidden">О компании</h2>
+                    <img
+                        class="about__logo"
+                        src="img/logo-full.png"
+                        alt="Гидроизоляция АС"
+                        width="880"
+                        height="250"
+                        loading="lazy"
+                    />
+
+                    <div class="about__text">
+                        <p>
+                            Гидроизоляция АС – российский производитель
+                            гидроизоляционных материалов, территориально
+                            расположенное в Краснодарском крае.
+                        </p>
+                        <p>
+                            В своем распоряжении компания имеет собственное бюро
+                            разработок, лабораторию для испытаний, проектный
+                            отдел, что позволяет тщательно следить за качеством
+                            продукции.
+                        </p>
+                        <p>
+                            Мы гордимся своими высококвалифицированными
+                            специалистами с более чем 20-летним опытом в сфере
+                            строительства, проектирования, разработок и
+                            применения гидроизоляции на крупномасштабных
+                            строительных объектах по всей России.
+                        </p>
+                        <p>
+                            Мы предлагаем не просто продукт для выполнения
+                            гидроизоляционных работ, но и целый комплекс услуг,
+                            включая:
+                        </p>
+                        <ul class="about__list">
+                            <li>составление проекта</li>
+                            <li>
+                                подготовка готовых решений по конкретному узлу
+                            </li>
+                            <li>обучение партнеров</li>
+                            <li>
+                                подбор проверенных типовых решений по материалам
+                                и работам в целом
+                            </li>
+                        </ul>
+                        <p>
+                            Наша главная цель – разработка и применение простых
+                            в использовании и надежных решения для гидроизоляции
+                            зданий и сооружений.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Поддержка специалистов по всей России -->
+            <section class="support" id="support">
+                <div class="support__inner">
+                    <h2 class="section-title support__title">
+                        Поддержка специалистов по всей России
+                    </h2>
+                    <p class="support__lead">
+                        Обучение на объекте, технический консалтинг и
+                        сопровождение проектов доступны по всей стране — от
+                        Калининграда до Владивостока. Онлайн-обучение охватывает
+                        каждый регион.
+                    </p>
+                    <img
+                        class="support__map"
+                        src="img/support-map-placeholder.png"
+                        alt="Карта России: география работы компании"
+                        width="1220"
+                        height="680"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал. Контакты и адрес — заглушки, замените на реальные данные компании.
+       id="contacts" — якорь для пункта меню «Контакты». -->
+        <footer class="footer" id="contacts">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__col footer__col--brand">
+                        <a
+                            class="footer__brand"
+                            href="#top"
+                            aria-label="Гидроизоляция АС — наверх"
+                        >
+                            <svg
+                                class="footer__logo"
+                                viewBox="0 0 48 48"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="24"
+                                    cy="24"
+                                    r="21"
+                                    fill="#eaf2fb"
+                                    stroke="#4a86c8"
+                                    stroke-width="3"
+                                />
+                                <path
+                                    d="M24 10c-5.5 0-9 4-9 9 0 6.5 9 17 9 17s9-10.5 9-17c0-5-3.5-9-9-9z"
+                                    fill="#3b78bf"
+                                />
+                                <circle cx="24" cy="19.5" r="3.6" fill="#fff" />
+                            </svg>
+                            <span>Гидроизоляция АС</span>
+                        </a>
+                        <p class="footer__about">
+                            Российский производитель гидроизоляционных
+                            материалов. Проектирование, типовые решения и
+                            обучение партнёров.
+                        </p>
+                    </div>
+
+                    <nav class="footer__col" aria-label="Разделы сайта">
+                        <h2 class="footer__heading">Разделы</h2>
+                        <ul class="footer__list">
+                            <li>
+                                <a class="footer__link" href="#services"
+                                    >Услуги</a
+                                >
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#projects"
+                                    >Завершённые проекты</a
+                                >
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#docs"
+                                    >Документы</a
+                                >
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#about"
+                                    >О компании</a
+                                >
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#support"
+                                    >Поддержка по России</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer__col">
+                        <h2 class="footer__heading">Контакты</h2>
+                        <div class="footer__contacts-list">
+                            <div class="footer__contact">
+                                <span class="footer__contact-label"
+                                    >Телефон</span
+                                >
+                                <a
+                                    class="footer__contact-value footer__contact-value--phone footer__link"
+                                    href="tel:+79999999999"
+                                    >+7(999)999-99-99</a
+                                >
+                            </div>
+                            <div class="footer__contact">
+                                <span class="footer__contact-label">Почта</span>
+                                <a
+                                    class="footer__contact-value footer__link"
+                                    href="mailto:info@example.ru"
+                                    >info@example.ru</a
+                                >
+                            </div>
+                            <div class="footer__contact">
+                                <span class="footer__contact-label">Адрес</span>
+                                <span class="footer__contact-value"
+                                    >Краснодарский край, ул. Примерная, 1</span
+                                >
+                            </div>
+                            <div class="footer__contact">
+                                <span class="footer__contact-label"
+                                    >Режим работы</span
+                                >
+                                <span class="footer__contact-value"
+                                    >Пн–Пт, 9:00–18:00</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <span>© 2026 Гидроизоляция АС. Все права защищены.</span>
+                    <a class="footer__up" href="#top">Наверх ↑</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Скрипты: по одному файлу на блок -->
+        <script src="js/header.js" defer></script>
+        <script src="js/show-more.js" defer></script>
+    </body>
+</html>

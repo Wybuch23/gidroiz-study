@@ -1,0 +1,132 @@
+/* ==========================================================
+   hero.css — первая секция (блок .hero)
+   ========================================================== */
+
+.hero {
+    /* Фон-эскиз здания: впишите путь к своему файлу,
+     например url("../img/hero.jpg"), и добавьте секции класс .hero--has-image */
+    --hero-bg-image: url("../img/herogz.png");
+
+    position: relative;
+    isolation: isolate;
+    min-height: calc(100vh - var(--header-h));
+    padding: clamp(32px, 6vw, 70px) var(--gutter) clamp(48px, 7vw, 90px);
+    background-color: #e4e4e4;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(242, 242, 242, 0.25),
+            rgba(220, 220, 220, 0.55)
+        ),
+        var(--hero-bg-image);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/* Заглушка фона (сетка окон), пока нет изображения */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            transparent 0 34px,
+            rgba(120, 120, 120, 0.28) 34px 36px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 46px,
+            rgba(120, 120, 120, 0.28) 46px 48px
+        );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        #000 25%,
+        #000 100%
+    );
+    mask-image: linear-gradient(to bottom, transparent 0, #000 25%, #000 100%);
+}
+.hero--has-image::before {
+    display: none;
+}
+
+/* Заголовок */
+.hero__title {
+    margin-bottom: clamp(28px, 6.5vw, 82px);
+    text-align: center;
+    font-size: var(--fs-h1);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+}
+
+/* Сетка карточек */
+.hero__cards {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid var(--color-border);
+    background: var(--color-card);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+
+.hero__card {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3.4vw, 44px);
+    min-height: clamp(260px, 30vw, 362px);
+    padding: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px);
+    text-align: center;
+}
+.hero__card + .hero__card {
+    border-left: 2px solid var(--color-border);
+}
+
+.hero__card--wide {
+    grid-column: 1 / -1;
+    gap: clamp(16px, 2.6vw, 34px);
+    border-left: 0 !important;
+    border-top: 2px solid var(--color-border);
+}
+
+.hero__card-title {
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+.hero__card--wide .hero__card-title {
+    font-size: var(--fs-h2-wide);
+}
+
+.hero__card-text {
+    max-width: 40ch;
+    margin: 0 auto;
+    font-size: var(--fs-text);
+    line-height: 1.45;
+    text-wrap: pretty;
+}
+.hero__card--wide .hero__card-text {
+    max-width: 68ch;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 680px) {
+    .hero__cards {
+        grid-template-columns: 1fr;
+    }
+    .hero__card {
+        min-height: 0;
+    }
+    .hero__card + .hero__card {
+        border-left: 0;
+        border-top: 2px solid var(--color-border);
+    }
+}
