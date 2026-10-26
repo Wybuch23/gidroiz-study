@@ -62,6 +62,8 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .footer__contact-value {
+  font-style: normal;               /* сбрасываем курсив у <address> */
+  overflow-wrap: anywhere;          /* длинная почта не вылезает за колонку */
   font-size: 1rem;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.92);

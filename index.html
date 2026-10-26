@@ -74,7 +74,7 @@
                 </nav>
 
                 <div class="header__right">
-                    <a class="btn" href="tel:+79999999999">+7(999)999-99-99</a>
+                    <a class="btn" href="tel:+79282314610">+7 928 231-46-10</a>
                     <button
                         class="header__burger"
                         type="button"
@@ -89,44 +89,624 @@
         </header>
 
         <main>
-            <section class="hero hero--has-image"" id="services">
+            <section class="hero hero--has-image" id="services">
                 <h1 class="hero__title">Институт гидроизоляции</h1>
 
-                <div class="hero__cards">
-                    <article class="hero__card">
-                        <h2 class="hero__card-title">
-                            Курс обучения по работе с узлами
-                        </h2>
-                        <p class="hero__card-text">
-                            Обучение правильному устройству стыков, примыканий,
-                            проходок и критических точек гидроизоляции.
-                        </p>
-                    </article>
+                <div class="hero__stage">
+                    <div class="hero__hint" data-hero-hint aria-hidden="true">
+                        Смотреть материалы
+                    </div>
+                    <div class="hero__cards">
+                        <button
+                            class="hero__card hero__card--interactive"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="hero-panel-nodes"
+                            data-hero-toggle="nodes"
+                        >
+                            <span class="hero__card-title"
+                                >Курс обучения по работе с узлами</span
+                            >
+                            <span class="hero__card-text"
+                                >Обучение правильному устройству стыков,
+                                примыканий, проходок и критических точек
+                                гидроизоляции.</span
+                            >
+                            <span class="hero__card-action"
+                                ><span data-hero-action-label
+                                    >Смотреть материалы</span
+                                ><svg viewBox="0 0 16 16" aria-hidden="true">
+                                    <path
+                                        d="M3 6l5 5 5-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></span>
+                        </button>
 
-                    <article class="hero__card">
-                        <h2 class="hero__card-title">
-                            Курс обучения по работе с материалами
-                        </h2>
-                        <p class="hero__card-text">
-                            Обучение по видам материалов, технологиям нанесения,
-                            совместимости и типичным ошибкам применения.
-                        </p>
-                    </article>
+                        <button
+                            class="hero__card hero__card--interactive"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="hero-panel-materials"
+                            data-hero-toggle="materials"
+                        >
+                            <span class="hero__card-title"
+                                >Курс обучения по работе с материалами</span
+                            >
+                            <span class="hero__card-text"
+                                >Обучение по видам материалов, технологиям
+                                нанесения, совместимости и типичным ошибкам
+                                применения.</span
+                            >
+                            <span class="hero__card-action"
+                                ><span data-hero-action-label
+                                    >Смотреть материалы</span
+                                ><svg viewBox="0 0 16 16" aria-hidden="true">
+                                    <path
+                                        d="M3 6l5 5 5-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></span>
+                        </button>
 
-                    <article class="hero__card hero__card--wide">
-                        <h2 class="hero__card-title">Типовые узлы</h2>
-                        <p class="hero__card-text">
-                            Готовые технические решения по стандартным узлам для
-                            использования в проектировании и на объекте.
-                        </p>
-                    </article>
+                        <article class="hero__card hero__card--wide">
+                            <h2 class="hero__card-title">Типовые узлы</h2>
+                            <p class="hero__card-text">
+                                Готовые технические решения по стандартным узлам
+                                для использования в проектировании и на объекте.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="hero__materials" aria-live="polite">
+                        <section
+                            class="hero__panel"
+                            id="hero-panel-nodes"
+                            data-hero-panel="nodes"
+                            hidden
+                        >
+                            <div class="hero__panel-heading">
+                                <div>
+                                    <h2 class="hero__panel-title">
+                                        Курс обучения по работе с узлами
+                                    </h2>
+                                    <p class="hero__panel-lead">
+                                        Выберите памятку, чтобы скачать
+                                        PDF-файл.
+                                    </p>
+                                </div>
+                                <button
+                                    class="hero__panel-back"
+                                    type="button"
+                                    data-hero-close
+                                    aria-label="Вернуться к разделам"
+                                >
+                                    ← Назад к разделам
+                                </button>
+                                <span class="hero__panel-count"
+                                    >10 материалов</span
+                                >
+                            </div>
+                            <ul class="hero__file-list">
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/germetizaciya-vvodov-kommunikaciy.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Герметизация мест ввода
+                                            коммуникаций</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/temperaturnyy-shov.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция температурного
+                                            шва</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/deformatsionnyy-shov.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Герметизация деформационного
+                                            шва</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/opalubochnye-otverstiya-flex-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция отверстий эластичной
+                                            гидроизоляцией ФЛЕКС 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/zhelezobetonnye-poverhnosti-flex-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция железобетонных
+                                            поверхностей ФЛЕКС 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/ekspluatiruemaya-krovlya.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция эксплуатируемой
+                                            кровли</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/holodnyy-shov-flex-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция холодного шва ФЛЕКС
+                                            2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/opalubochnye-otverstiya-epoksid.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция отверстий эпоксидной
+                                            гидроизоляцией</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/holodnyy-shov-epoksid.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция холодного шва
+                                            эпоксидной гидроизоляцией</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-nodes/zhelezobetonnye-poverhnosti-penetrat.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Гидроизоляция железобетонных
+                                            поверхностей ПЕНЕТРАТ</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section
+                            class="hero__panel"
+                            id="hero-panel-materials"
+                            data-hero-panel="materials"
+                            hidden
+                        >
+                            <div class="hero__panel-heading">
+                                <div>
+                                    <h2 class="hero__panel-title">
+                                        Курс обучения по работе с материалами
+                                    </h2>
+                                    <p class="hero__panel-lead">
+                                        Инструкции по применению
+                                        гидроизоляционных материалов.
+                                    </p>
+                                </div>
+                                <button
+                                    class="hero__panel-back"
+                                    type="button"
+                                    data-hero-close
+                                    aria-label="Вернуться к разделам"
+                                >
+                                    ← Назад к разделам
+                                </button>
+                                <span class="hero__panel-count"
+                                    >7 материалов</span
+                                >
+                            </div>
+                            <ul class="hero__file-list">
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/primer-pu-1k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Праймер ПУ 1К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/flex-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >ФЛЕКС 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/pu-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >ПУ 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/rem-500.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >РЕМ 500</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/penetrat.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >ПЕНЕТРАТ</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/primer-epoxy-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >Праймер ЭПОКСИ 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="hero__file"
+                                        href="docs/training-materials/epoxy-2k.pdf"
+                                        download
+                                        ><span
+                                            class="hero__file-icon"
+                                            aria-hidden="true"
+                                            >PDF</span
+                                        ><span class="hero__file-name"
+                                            >ЭПОКСИ 2К</span
+                                        ><span class="hero__file-download"
+                                            >Скачать
+                                            <svg
+                                                viewBox="0 0 16 16"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                /></svg></span
+                                    ></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
             </section>
 
-            <!-- Завершённые проекты.
+            <!-- Произведённые работы.
          data-initial — сколько карточек видно сразу, data-step — сколько добавляет «Показать больше» (js/show-more.js).
-         Чтобы добавить проект, скопируйте любой <article class="projects__card"> и вставьте
-         в конец <div class="projects__list">. Если карточек больше data-initial, кнопка появится сама. -->
+         Чтобы добавить фото, скопируйте <article class="projects__card"> и вставьте в конец <div class="projects__list">.
+         Если карточек больше data-initial, кнопка появится сама. -->
             <section
                 class="projects"
                 id="projects"
@@ -135,7 +715,7 @@
                 data-step="3"
             >
                 <div class="projects__inner">
-                    <h2 class="section-title">Завершённые проекты</h2>
+                    <h2 class="section-title">Произведённые работы</h2>
                     <p class="section-lead projects__lead">
                         Подборка проектов, где правильное проектирование и
                         монтаж обеспечили надёжную и долговечную гидроизоляцию.
@@ -149,58 +729,100 @@
                         <article class="projects__card">
                             <img
                                 class="projects__img"
-                                src="img/projects/project1.png"
-                                alt="Многоуровневый паркинг"
-                                width="600"
-                                height="400"
+                                src="img/works/work-1.webp"
+                                alt="Устройство гидроизоляции на кровле, Краснодар"
+                                width="1200"
+                                height="800"
                                 loading="lazy"
                             />
-                            <p class="projects__city">Москва</p>
-                            <h3 class="projects__card-title">
-                                Многоуровневый паркинг
-                            </h3>
-                            <p class="projects__card-text">
-                                Полная система гидроизоляции подземных стен,
-                                плит и деформационных швов.
-                            </p>
                         </article>
 
                         <article class="projects__card">
                             <img
                                 class="projects__img"
-                                src="img/projects/project2.png"
-                                alt="Монтаж плоской кровли"
-                                width="600"
-                                height="400"
+                                src="img/works/work-2.webp"
+                                alt="Гидроизоляция примыкания к парапету, Краснодар"
+                                width="1200"
+                                height="800"
                                 loading="lazy"
                             />
-                            <p class="projects__city">Санкт-Петербург</p>
-                            <h3 class="projects__card-title">
-                                Монтаж плоской кровли коммерческого здания
-                            </h3>
-                            <p class="projects__card-text">
-                                Мембранная кровля с детальной проработкой
-                                парапетов и проходок.
-                            </p>
                         </article>
 
                         <article class="projects__card">
                             <img
                                 class="projects__img"
-                                src="img/projects/project3.png"
-                                alt="Проходки труб и примыкания"
-                                width="600"
-                                height="400"
+                                src="img/works/work-3.webp"
+                                alt="Гидроизоляция примыкания стены к плите, Краснодар"
+                                width="1200"
+                                height="800"
                                 loading="lazy"
                             />
-                            <p class="projects__city">Казань</p>
-                            <h3 class="projects__card-title">
-                                Проходки труб и устройство примыканий
-                            </h3>
-                            <p class="projects__card-text">
-                                Армированная проработка критических узлов для
-                                исключения путей протечек.
-                            </p>
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-4.webp"
+                                alt="Обмазочная гидроизоляция у основания стены, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-5.webp"
+                                alt="Гидроизоляция примыкания стены к полу, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-6.webp"
+                                alt="Гидроизоляция вертикального шва у кирпичной стены, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-7.webp"
+                                alt="Гидроизоляция узла у кирпичной стены, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-8.webp"
+                                alt="Гидроизоляция парапета кровли, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
+                        </article>
+
+                        <article class="projects__card">
+                            <img
+                                class="projects__img"
+                                src="img/works/work-9.webp"
+                                alt="Гидроизоляция примыкания в помещении, Краснодар"
+                                width="1200"
+                                height="800"
+                                loading="lazy"
+                            />
                         </article>
                     </div>
 
@@ -240,11 +862,11 @@
                     <div class="docs__list" id="docs-list" data-show-more-list>
                         <article class="docs__card">
                             <h3 class="docs__card-title">
-                                Сертификат о контакте с пищевой водой
+                                Сертификат о контакте с питьевой водой
                             </h3>
                             <a
                                 class="docs__link"
-                                href="docs/certificate-drinking-water.pdf"
+                                href="docs/sertifikat-pitevaya-voda-fleks-2k.pdf"
                                 download
                                 >Скачать
                                 <svg viewBox="0 0 8 12" aria-hidden="true">
@@ -258,14 +880,13 @@
                                     /></svg
                             ></a>
                         </article>
-
                         <article class="docs__card">
                             <h3 class="docs__card-title">
                                 Декларации о соответствии
                             </h3>
                             <a
                                 class="docs__link"
-                                href="docs/declarations.pdf"
+                                href="docs/deklaracii-o-sootvetstvii.pdf"
                                 download
                                 >Скачать
                                 <svg viewBox="0 0 8 12" aria-hidden="true">
@@ -279,12 +900,52 @@
                                     /></svg
                             ></a>
                         </article>
-
                         <article class="docs__card">
                             <h3 class="docs__card-title">Протокол испытаний</h3>
                             <a
                                 class="docs__link"
-                                href="docs/test-report.pdf"
+                                href="docs/protokol-ispytanij-0107-3187.pdf"
+                                download
+                                >Скачать
+                                <svg viewBox="0 0 8 12" aria-hidden="true">
+                                    <path
+                                        d="M1.5 1.5 6 6l-4.5 4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></a>
+                        </article>
+                        <article class="docs__card">
+                            <h3 class="docs__card-title">
+                                Сертификат соответствия: смеси на цементном
+                                вяжущем
+                            </h3>
+                            <a
+                                class="docs__link"
+                                href="docs/sertifikat-sootvetstviya-cement-vyazhushchee.jpg"
+                                download
+                                >Скачать
+                                <svg viewBox="0 0 8 12" aria-hidden="true">
+                                    <path
+                                        d="M1.5 1.5 6 6l-4.5 4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></a>
+                        </article>
+                        <article class="docs__card">
+                            <h3 class="docs__card-title">
+                                Сертификат соответствия: полимерные материалы
+                            </h3>
+                            <a
+                                class="docs__link"
+                                href="docs/sertifikat-sootvetstviya-polimery.jpg"
                                 download
                                 >Скачать
                                 <svg viewBox="0 0 8 12" aria-hidden="true">
@@ -325,8 +986,8 @@
                         class="about__logo"
                         src="img/logo-full.png"
                         alt="Гидроизоляция АС"
-                        width="880"
-                        height="250"
+                        width="1488"
+                        height="375"
                         loading="lazy"
                     />
 
@@ -388,17 +1049,17 @@
                     </p>
                     <img
                         class="support__map"
-                        src="img/support-map-placeholder.png"
+                        src="img/support-map.webp"
                         alt="Карта России: география работы компании"
-                        width="1220"
-                        height="680"
+                        width="2134"
+                        height="1326"
                         loading="lazy"
                     />
                 </div>
             </section>
         </main>
 
-        <!-- Подвал. Контакты и адрес — заглушки, замените на реальные данные компании.
+        <!-- Подвал. Режим работы — заглушка, замените на реальный.
        id="contacts" — якорь для пункта меню «Контакты». -->
         <footer class="footer" id="contacts">
             <div class="footer__inner">
@@ -447,7 +1108,7 @@
                             </li>
                             <li>
                                 <a class="footer__link" href="#projects"
-                                    >Завершённые проекты</a
+                                    >Произведённые работы</a
                                 >
                             </li>
                             <li>
@@ -477,23 +1138,27 @@
                                 >
                                 <a
                                     class="footer__contact-value footer__contact-value--phone footer__link"
-                                    href="tel:+79999999999"
-                                    >+7(999)999-99-99</a
+                                    href="tel:+79282314610"
+                                    >+7 928 231-46-10</a
                                 >
                             </div>
                             <div class="footer__contact">
                                 <span class="footer__contact-label">Почта</span>
                                 <a
                                     class="footer__contact-value footer__link"
-                                    href="mailto:info@example.ru"
-                                    >info@example.ru</a
+                                    href="mailto:gidroizolyatsiya.as@mail.ru"
+                                    >gidroizolyatsiya.as@mail.ru</a
                                 >
                             </div>
                             <div class="footer__contact">
-                                <span class="footer__contact-label">Адрес</span>
-                                <span class="footer__contact-value"
-                                    >Краснодарский край, ул. Примерная, 1</span
+                                <span class="footer__contact-label"
+                                    >Адрес офиса</span
                                 >
+                                <address class="footer__contact-value">
+                                    Россия, Краснодарский край,<br />г.
+                                    Краснодар, ул. Одесская, 48,<br />литер З, 2
+                                    этаж
+                                </address>
                             </div>
                             <div class="footer__contact">
                                 <span class="footer__contact-label"
@@ -516,6 +1181,7 @@
 
         <!-- Скрипты: по одному файлу на блок -->
         <script src="js/header.js" defer></script>
+        <script src="js/hero-materials.js" defer></script>
         <script src="js/show-more.js" defer></script>
     </body>
 </html>

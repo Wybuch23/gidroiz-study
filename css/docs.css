@@ -39,7 +39,8 @@
   transition: background .2s ease;
 }
 .docs__card:hover { background: #f5f5f5; }
-.docs__card:focus-within { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+.docs__card:has(.docs__link:focus-visible) { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+.docs__card:focus { outline: none; }   /* карточка получает фокус программно после «Показать больше» */
 
 .docs__card-title {
   font-size: clamp(1.1875rem, 0.95rem + 0.95vw, 1.75rem);
@@ -60,7 +61,7 @@
   position: absolute;
   inset: 0;
 }
-.docs__link:focus-visible { outline: none; }   /* рамку рисует карточка (:focus-within) */
+.docs__link:focus-visible { outline: none; }   /* рамку рисует карточка (:has(:focus-visible)) */
 .docs__link svg {
   width: 8px;
   height: 12px;

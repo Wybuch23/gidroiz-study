@@ -3,130 +3,309 @@
    ========================================================== */
 
 .hero {
-    /* Фон-эскиз здания: впишите путь к своему файлу,
-     например url("../img/hero.jpg"), и добавьте секции класс .hero--has-image */
-    --hero-bg-image: url("../img/herogz.png");
+  /* Фон-эскиз здания. Чтобы заменить, поменяйте путь ниже на свой файл из img/.
+     Класс .hero--has-image у секции отключает заглушку-сетку */
+  --hero-bg-image: url("../img/herogz.webp");
 
-    position: relative;
-    isolation: isolate;
-    min-height: calc(100vh - var(--header-h));
-    padding: clamp(32px, 6vw, 70px) var(--gutter) clamp(48px, 7vw, 90px);
-    background-color: #e4e4e4;
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(242, 242, 242, 0.25),
-            rgba(220, 220, 220, 0.55)
-        ),
-        var(--hero-bg-image);
-    background-size: cover;
-    background-position: center bottom;
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - var(--header-h));
+  padding: clamp(32px, 6vw, 70px) var(--gutter) clamp(48px, 7vw, 90px);
+  background-color: #e4e4e4;
+  background-image:
+    linear-gradient(to bottom, rgba(242, 242, 242, .25), rgba(220, 220, 220, .55)),
+    var(--hero-bg-image);
+  background-size: cover;
+  background-position: center bottom;
 }
 
 /* Заглушка фона (сетка окон), пока нет изображения */
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.55;
-    background-image:
-        repeating-linear-gradient(
-            to right,
-            transparent 0 34px,
-            rgba(120, 120, 120, 0.28) 34px 36px
-        ),
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0 46px,
-            rgba(120, 120, 120, 0.28) 46px 48px
-        );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0,
-        #000 25%,
-        #000 100%
-    );
-    mask-image: linear-gradient(to bottom, transparent 0, #000 25%, #000 100%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .55;
+  background-image:
+    repeating-linear-gradient(to right, transparent 0 34px, rgba(120, 120, 120, .28) 34px 36px),
+    repeating-linear-gradient(to bottom, transparent 0 46px, rgba(120, 120, 120, .28) 46px 48px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 25%, #000 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 25%, #000 100%);
 }
-.hero--has-image::before {
-    display: none;
-}
+.hero--has-image::before { display: none; }
 
 /* Заголовок */
 .hero__title {
-    margin-bottom: clamp(28px, 6.5vw, 82px);
-    text-align: center;
-    font-size: var(--fs-h1);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    text-wrap: balance;
+  margin-bottom: clamp(28px, 6.5vw, 82px);
+  text-align: center;
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 /* Сетка карточек */
 .hero__cards {
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 2px solid var(--color-border);
-    background: var(--color-card);
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid var(--color-border);
+  background: var(--color-card);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
 
 .hero__card {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(20px, 3.4vw, 44px);
-    min-height: clamp(260px, 30vw, 362px);
-    padding: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px);
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3.4vw, 44px);
+  min-height: clamp(260px, 30vw, 362px);
+  padding: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px);
+  text-align: center;
 }
-.hero__card + .hero__card {
-    border-left: 2px solid var(--color-border);
-}
+.hero__card + .hero__card { border-left: 2px solid var(--color-border); }
 
 .hero__card--wide {
-    grid-column: 1 / -1;
-    gap: clamp(16px, 2.6vw, 34px);
-    border-left: 0 !important;
-    border-top: 2px solid var(--color-border);
+  grid-column: 1 / -1;
+  gap: clamp(16px, 2.6vw, 34px);
+  border-left: 0 !important;
+  border-top: 2px solid var(--color-border);
 }
 
 .hero__card-title {
-    font-size: var(--fs-h2);
-    font-weight: 600;
-    line-height: 1.2;
-    text-wrap: balance;
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: 1.2;
+  text-wrap: balance;
 }
-.hero__card--wide .hero__card-title {
-    font-size: var(--fs-h2-wide);
-}
+.hero__card--wide .hero__card-title { font-size: var(--fs-h2-wide); }
 
 .hero__card-text {
-    max-width: 40ch;
-    margin: 0 auto;
-    font-size: var(--fs-text);
-    line-height: 1.45;
-    text-wrap: pretty;
+  max-width: 40ch;
+  margin: 0 auto;
+  font-size: var(--fs-text);
+  line-height: 1.45;
+  text-wrap: pretty;
 }
-.hero__card--wide .hero__card-text {
-    max-width: 68ch;
-}
+.hero__card--wide .hero__card-text { max-width: 68ch; }
 
 /* ---------- Адаптив ---------- */
 @media (max-width: 680px) {
-    .hero__cards {
-        grid-template-columns: 1fr;
-    }
-    .hero__card {
-        min-height: 0;
-    }
-    .hero__card + .hero__card {
-        border-left: 0;
-        border-top: 2px solid var(--color-border);
-    }
+  .hero__cards { grid-template-columns: 1fr; }
+  .hero__card { min-height: 0; }
+  .hero__card + .hero__card { border-left: 0; border-top: 2px solid var(--color-border); }
 }
+
+/* ---------- Интерактивные карточки и список учебных материалов ---------- */
+.hero__card {
+  color: inherit;
+  font: inherit;
+  background: rgba(255, 255, 255, .88);
+  transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.hero__card--interactive {
+  appearance: none;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+.hero__card--interactive:hover,
+.hero__card--interactive:focus-visible,
+.hero__card--interactive[aria-expanded="true"] {
+  background: #fff;
+  box-shadow: inset 0 0 0 3px var(--color-accent, #3b78bf);
+}
+.hero__card--interactive:hover { transform: translateY(-2px); }
+.hero__card--interactive:focus-visible { outline: 3px solid var(--color-accent, #3b78bf); outline-offset: 3px; z-index: 1; }
+.hero__card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--color-accent, #285f9e);
+}
+.hero__card-action svg { width: 16px; height: 16px; transition: transform .2s ease; }
+.hero__card--interactive[aria-expanded="true"] .hero__card-action svg { transform: rotate(180deg); }
+.hero__materials { max-width: 1180px; margin: 20px auto 0; }
+.hero__panel {
+  padding: clamp(20px, 3vw, 36px);
+  border: 2px solid var(--color-border);
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 12px 32px rgba(0,0,0,.08);
+}
+.hero__panel[hidden] { display: none; }
+.hero__panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.hero__panel-title { margin: 0; font-size: clamp(1.25rem, 1rem + 1vw, 1.8rem); line-height: 1.2; font-weight: 600; }
+.hero__panel-lead { margin: 8px 0 0; font-size: .95rem; line-height: 1.45; color: #555; }
+.hero__panel-count { flex: 0 0 auto; padding: 6px 10px; border-radius: 999px; background: #eef3f8; color: #34536e; font-size: .8rem; white-space: nowrap; }
+.hero__file-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.hero__file-list li { min-width: 0; }
+.hero__file {
+  display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 12px;
+  border: 1px solid #d8dee5; background: #fff; color: inherit; text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.hero__file:hover, .hero__file:focus-visible { border-color: var(--color-accent, #3b78bf); background: #f5f8fc; }
+.hero__file:focus-visible { outline: 2px solid var(--color-accent, #3b78bf); outline-offset: 2px; }
+.hero__file-icon { flex: 0 0 auto; display: grid; place-items: center; width: 38px; height: 44px; border-radius: 4px; background: #fbeeee; color: #a33434; font-size: .68rem; font-weight: 700; }
+.hero__file-name { flex: 1 1 auto; min-width: 0; font-size: .92rem; line-height: 1.35; font-weight: 500; }
+.hero__file-download { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 5px; color: var(--color-accent, #285f9e); font-size: .8rem; font-weight: 600; }
+.hero__file-download svg { width: 16px; height: 16px; }
+@media (max-width: 760px) {
+  .hero__file-list { grid-template-columns: 1fr; }
+  .hero__panel-heading { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 680px) {
+  .hero__card--interactive:hover { transform: none; }
+  .hero__card-action { margin-top: 0; }
+  .hero__panel { padding: 18px 14px; }
+  .hero__file { gap: 10px; padding: 10px; }
+  .hero__file-download { font-size: 0; }
+  .hero__file-download svg { width: 19px; height: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__card, .hero__card-action svg, .hero__file { transition: none; }
+}
+.hero__card--interactive + .hero__card--interactive { border-left: 2px solid var(--color-border); }
+@media (max-width: 680px) {
+  .hero__card--interactive + .hero__card--interactive { border-left: 0; border-top: 2px solid var(--color-border); }
+}
+
+/* Панель открывается поверх карточек в пределах той же области Hero.
+   Высота сцены постоянная: список PDF прокручивается внутри, а не растягивает фон секции. */
+.hero__stage {
+  position: relative;
+  width: min(100%, 1180px);
+  height: clamp(560px, 68vh, 720px);
+  margin: 0 auto;
+}
+.hero__stage .hero__cards {
+  width: 100%;
+  height: 100%;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+}
+.hero__stage .hero__card { min-height: 0; }
+.hero__stage .hero__materials {
+  position: absolute;
+  inset: 0;
+  max-width: none;
+  margin: 0;
+  /* Обёртка панели лежит поверх карточек, но не должна перехватывать клики,
+     когда сами панели скрыты. */
+  pointer-events: none;
+}
+.hero__stage .hero__panel {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 680px) {
+  .hero__stage { height: 690px; }
+  .hero__stage .hero__cards {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* Корректировки: карточки не переполняют свои ячейки, возврат из списка документов. */
+.hero__stage,
+.hero__stage * { box-sizing: border-box; }
+.hero__stage .hero__cards {
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 0;
+}
+.hero__stage .hero__card {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: clamp(18px, 2.5vw, 34px);
+  gap: clamp(12px, 2vw, 28px);
+}
+.hero__stage .hero__card-action {
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding-top: 4px;
+  line-height: 1.25;
+}
+.hero__panel-heading { align-items: center; }
+.hero__panel-back {
+  flex: 0 0 auto;
+  border: 1px solid #d8dee5;
+  border-radius: 4px;
+  padding: 10px 14px;
+  background: #fff;
+  color: var(--color-accent, #285f9e);
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero__panel-back:hover, .hero__panel-back:focus-visible { background: #f2f6fa; border-color: var(--color-accent, #3b78bf); }
+.hero__panel-back:focus-visible { outline: 2px solid var(--color-accent, #3b78bf); outline-offset: 2px; }
+@media (max-width: 760px) { .hero__panel-heading { align-items: stretch; } .hero__panel-back { align-self: flex-start; } }
+
+
+/* Подсказка закреплена в свободной зоне над карточками: не зависит от высоты их содержимого. */
+.hero__stage {
+  --hero-hint-offset: 42px;
+}
+.hero__hint {
+  position: absolute;
+  z-index: 5;
+  top: calc(-1 * var(--hero-hint-offset));
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(59, 120, 191, .24);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .96);
+  color: var(--color-accent, #285f9e);
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+  pointer-events: none;
+}
+.hero__hint span { font-size: 1.2em; line-height: .8; }
+.hero__stage:has(.hero__card--interactive:hover) .hero__hint,
+.hero__stage:has(.hero__card--interactive:focus-visible) .hero__hint {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.hero__stage:has([data-hero-panel]:not([hidden])) .hero__hint {
+  opacity: 0;
+  visibility: hidden;
+}
+/* Текст действия больше не занимает место в карточке и не обрезается. */
+.hero__stage .hero__card-action { display: none; }
+@media (max-width: 680px) {
+  .hero__stage { --hero-hint-offset: 38px; }
+  .hero__hint {
+    left: 0;
+    right: auto;
+    max-width: 100%;
+    font-size: .82rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) { .hero__hint { transition: none; } }
