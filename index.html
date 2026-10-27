@@ -93,89 +93,105 @@
                 <h1 class="hero__title">Институт гидроизоляции</h1>
 
                 <div class="hero__stage">
-                    <div class="hero__hint" data-hero-hint aria-hidden="true">
-                        Смотреть материалы
-                    </div>
                     <div class="hero__cards">
-                        <button
-                            class="hero__card hero__card--interactive"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="hero-panel-nodes"
-                            data-hero-toggle="nodes"
-                        >
-                            <span class="hero__card-title"
-                                >Курс обучения по работе с узлами</span
+                        <article class="hero__card hero__card--interactive">
+                            <h2 class="hero__card-title" id="hero-card-nodes-title">Курс обучения по работе с узлами</h2>
+                            <p class="hero__card-text">Обучение правильному устройству стыков, примыканий, проходок и критических точек гидроизоляции.</p>
+                            <button
+                                class="hero__card-action"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="hero-panel-nodes"
+                                aria-describedby="hero-card-nodes-title"
+                                data-hero-toggle="nodes"
                             >
-                            <span class="hero__card-text"
-                                >Обучение правильному устройству стыков,
-                                примыканий, проходок и критических точек
-                                гидроизоляции.</span
-                            >
-                            <span class="hero__card-action"
-                                ><span data-hero-action-label
-                                    >Смотреть материалы</span
-                                ><svg viewBox="0 0 16 16" aria-hidden="true">
-                                    <path
-                                        d="M3 6l5 5 5-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.7"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    /></svg
-                            ></span>
-                        </button>
+                                <span>Смотреть материалы</span>
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </button>
+                        </article>
 
-                        <button
-                            class="hero__card hero__card--interactive"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="hero-panel-materials"
-                            data-hero-toggle="materials"
-                        >
-                            <span class="hero__card-title"
-                                >Курс обучения по работе с материалами</span
+                        <article class="hero__card hero__card--interactive">
+                            <h2 class="hero__card-title" id="hero-card-materials-title">Курс обучения по работе с материалами</h2>
+                            <p class="hero__card-text">Обучение по видам материалов, технологиям нанесения, совместимости и типичным ошибкам применения.</p>
+                            <button
+                                class="hero__card-action"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="hero-panel-materials"
+                                aria-describedby="hero-card-materials-title"
+                                data-hero-toggle="materials"
                             >
-                            <span class="hero__card-text"
-                                >Обучение по видам материалов, технологиям
-                                нанесения, совместимости и типичным ошибкам
-                                применения.</span
-                            >
-                            <span class="hero__card-action"
-                                ><span data-hero-action-label
-                                    >Смотреть материалы</span
-                                ><svg viewBox="0 0 16 16" aria-hidden="true">
-                                    <path
-                                        d="M3 6l5 5 5-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.7"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    /></svg
-                            ></span>
-                        </button>
+                                <span>Смотреть материалы</span>
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </button>
+                        </article>
 
-                        <article class="hero__card hero__card--wide">
-                            <h2 class="hero__card-title">Типовые узлы</h2>
+                        <article class="hero__card hero__card--wide hero__card--interactive">
+                            <h2 class="hero__card-title" id="hero-card-typical-title">Типовые узлы</h2>
                             <p class="hero__card-text">
                                 Готовые технические решения по стандартным узлам
                                 для использования в проектировании и на объекте.
                             </p>
+                            <button
+                                class="hero__card-action"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="hero-panel-typical"
+                                aria-describedby="hero-card-typical-title"
+                                data-hero-toggle="typical"
+                            >
+                                <span>Смотреть материалы</span>
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </button>
                         </article>
                     </div>
 
-                    <div class="hero__materials" aria-live="polite">
+                    <div class="hero__materials">
                         <section
                             class="hero__panel"
-                            id="hero-panel-nodes"
-                            data-hero-panel="nodes"
+                            id="hero-panel-typical"
+                            data-hero-panel="typical"
+                            aria-labelledby="hero-panel-typical-title"
                             hidden
                         >
                             <div class="hero__panel-heading">
                                 <div>
-                                    <h2 class="hero__panel-title">
+                                    <h2 class="hero__panel-title" id="hero-panel-typical-title">
+                                        Типовые узлы
+                                    </h2>
+                                    <p class="hero__panel-lead">
+                                        Выберите чертёж, чтобы скачать изображение узла.
+                                    </p>
+                                </div>
+                                <button
+                                    class="hero__panel-back"
+                                    type="button"
+                                    data-hero-close
+                                    aria-label="Вернуться к разделам"
+                                >
+                                    ← Назад к разделам
+                                </button>
+                                <span class="hero__panel-count">5 материалов</span>
+                            </div>
+                            <ul class="hero__file-list">
+                                <li><a class="hero__file" href="docs/typical-nodes/ekspluatiruemaya-krovlya.jpg" download><span class="hero__file-icon" aria-hidden="true">JPG</span><span class="hero__file-name">Гидроизоляция эксплуатируемых кровель</span><span class="hero__file-download">Скачать <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+                                <li><a class="hero__file" href="docs/typical-nodes/deformatsionnye-shvy.jpg" download><span class="hero__file-icon" aria-hidden="true">JPG</span><span class="hero__file-name">Герметизация вертикальных и горизонтальных деформационных швов</span><span class="hero__file-download">Скачать <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+                                <li><a class="hero__file" href="docs/typical-nodes/vvod-kommunikaciy.jpg" download><span class="hero__file-icon" aria-hidden="true">JPG</span><span class="hero__file-name">Герметизация мест ввода коммуникаций</span><span class="hero__file-download">Скачать <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+                                <li><a class="hero__file" href="docs/typical-nodes/zhelezobeton-epoksidnaya.jpg" download><span class="hero__file-icon" aria-hidden="true">JPG</span><span class="hero__file-name">Гидроизоляция железобетонных поверхностей — эпоксидная система</span><span class="hero__file-download">Скачать <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+                                <li><a class="hero__file" href="docs/typical-nodes/zhelezobeton-pronikayushchaya.jpg" download><span class="hero__file-icon" aria-hidden="true">JPG</span><span class="hero__file-name">Гидроизоляция железобетонных поверхностей — проникающая система</span><span class="hero__file-download">Скачать <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 12v2h10v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+                            </ul>
+                        </section>
+
+                        <section
+                            class="hero__panel"
+                            id="hero-panel-nodes"
+                            data-hero-panel="nodes"
+                            aria-labelledby="hero-panel-nodes-title"
+                            hidden
+                        >
+                            <div class="hero__panel-heading">
+                                <div>
+                                    <h2 class="hero__panel-title" id="hero-panel-nodes-title">
                                         Курс обучения по работе с узлами
                                     </h2>
                                     <p class="hero__panel-lead">
@@ -483,11 +499,12 @@
                             class="hero__panel"
                             id="hero-panel-materials"
                             data-hero-panel="materials"
+                            aria-labelledby="hero-panel-materials-title"
                             hidden
                         >
                             <div class="hero__panel-heading">
                                 <div>
-                                    <h2 class="hero__panel-title">
+                                    <h2 class="hero__panel-title" id="hero-panel-materials-title">
                                         Курс обучения по работе с материалами
                                     </h2>
                                     <p class="hero__panel-lead">
@@ -1134,7 +1151,17 @@
                         <div class="footer__contacts-list">
                             <div class="footer__contact">
                                 <span class="footer__contact-label"
-                                    >Телефон</span
+                                    >Телефон приема заявок (бесплатно по РФ)</span
+                                >
+                                <a
+                                    class="footer__contact-value footer__contact-value--phone footer__link"
+                                    href="tel:88004447173"
+                                    >8 (800) 444-71-73</a
+                                >
+                            </div>
+                            <div class="footer__contact">
+                                <span class="footer__contact-label"
+                                    >Телефон руководителя отдела продаж</span
                                 >
                                 <a
                                     class="footer__contact-value footer__contact-value--phone footer__link"
