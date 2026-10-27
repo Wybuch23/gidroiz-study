@@ -49,4 +49,53 @@
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && activeToggle) closeAll({ restoreFocus: true });
     });
+
+
+    // Вкладки внутри карточки «Курс обучения по работе с узлами».
+    const nodePanel = document.querySelector('[data-hero-panel="nodes"]');
+    if (nodePanel) {
+        const tabButtons = [...nodePanel.querySelectorAll('[data-node-tab]')];
+        const tabPanels = [...nodePanel.querySelectorAll('[data-node-tab-panel]')];
+        const count = nodePanel.querySelector('[data-node-count]');
+        const description = nodePanel.querySelector('[data-node-description]');
+        const tabMeta = {
+            courses: {
+                count: '10 материалов',
+                description: 'Подробные учебные материалы по выполнению гидроизоляционных работ.'
+            },
+            schemes: {
+                count: '9 схем',
+                description: 'Краткие пошаговые схемы для применения непосредственно на объекте.'
+            }
+        };
+
+        function activateNodeTab(name, moveFocus = false) {
+            tabButtons.forEach((button) => {
+                const active = button.dataset.nodeTab === name;
+                button.classList.toggle('is-active', active);
+                button.setAttribute('aria-selected', String(active));
+                button.tabIndex = active ? 0 : -1;
+                if (active && moveFocus) button.focus();
+            });
+            tabPanels.forEach((panel) => { panel.hidden = panel.dataset.nodeTabPanel !== name; });
+            if (count && tabMeta[name]) count.textContent = tabMeta[name].count;
+            if (description && tabMeta[name]) description.textContent = tabMeta[name].description;
+        }
+
+        tabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => activateNodeTab(button.dataset.nodeTab));
+            button.addEventListener('keydown', (event) => {
+                if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+                event.preventDefault();
+                let next = index;
+                if (event.key === 'ArrowRight') next = (index + 1) % tabButtons.length;
+                if (event.key === 'ArrowLeft') next = (index - 1 + tabButtons.length) % tabButtons.length;
+                if (event.key === 'Home') next = 0;
+                if (event.key === 'End') next = tabButtons.length - 1;
+                activateNodeTab(tabButtons[next].dataset.nodeTab, true);
+            });
+        });
+        activateNodeTab('courses');
+    }
+
 })();
